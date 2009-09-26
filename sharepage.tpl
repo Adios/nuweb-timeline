@@ -385,7 +385,7 @@ else document.write('<link href="/template/destyle03/basic_f.css" rel="styleshee
       <tr>
         <td width="1%" class="m-left" ></td>
         <td width="98%" bgcolor="#FFFFFF">
-          <div id="header">
+          <div id="header" style="position: relative;">
              <div id="container01">
                <div id="ShareTemplate">
                 <form id="form_ls" action="/cgi-bin/InternalSearch.php">
@@ -394,27 +394,9 @@ else document.write('<link href="/template/destyle03/basic_f.css" rel="styleshee
                   </form>
                </div>
               </div> 
-              <div id="Site_name"><a href="##SITE_URL##">##SITE_NAME##</a></div>
-
-          <div id="ShareDir">
-            <!-- #BEGINZONE SHARE_HEADER -->
-            <!-- #ENDZONE SHARE_HEADER -->
-              <!-- #BEGINTABLE SHARE_ITEM -->
-                <div id="ShareDirItem"><a href="##S_SHARE_EURL##" >##S_SHOW_NAME##</a>&nbsp;&nbsp;&nbsp;</div>
-              <!-- #ENDTABLE SHARE_ITEM -->
-            <!-- #BEGINZONE SHARE_FOOTER -->
-            <!-- #ENDZONE SHARE_FOOTER -->
-          </div>
 
              <!-- ##TEMP_TOOLBAR_BEGIN## -->
-             <div id="TempToolBar">			<div id="BnSubscribe" style="FLOAT:right;padding-left:10;">
-				<table onmouseover="style.textDecoration='underline';style.color='#999999';" onmouseout="style.textDecoration='none';style.color='#706447'" style="cursor:hand;font-size:10pt;color:#706447;FONT-FAMILY:'&#32048;&#26126;&#39636;';TEXT-DECORATION: none" onclick="window.open('http://www.nuweb.cc/user/##ADMIN_NAME####SHARE_NAME##rss.xml');" cellSpacing="0" cellPadding="0" border="0">
-					<tr height="25">
-						<td vAlign="center" align="right"><img width=16 src="/template/common/button/bt2_1.gif"></td>
-						<td class="button-word" style="padding:0px 5px 0px 5px: white-space:nowrap;" vAlign="center" align="middle">RSS</td>
-					</tr>
-				</table>
-			</div>
+             <div id="TempToolBar" style="position: absolute; right: 5px; top: 20px;">
 			<div id="BnRSS" style="FLOAT: right;padding-left:10;">
 				<table onmouseover="style.textDecoration='underline';style.color='#999999';" onmouseout="style.textDecoration='none';style.color='#706447'" style="cursor:hand;font-size:10pt;color:#706447;FONT-FAMILY:'&#32048;&#26126;&#39636;';TEXT-DECORATION: none" onclick="window.open('/cgi-bin/sbs_genform.php?dirname=##SHARE_NAME##&uname=##REMOTE_USERNAME##&email=##REMOTE_USEREMAIL##','','left=100,top=100,width=600,height=300');" cellSpacing="0" cellPadding="0" border="0">
 					<tr height="25">
@@ -454,16 +436,7 @@ else document.write('<link href="/template/destyle03/basic_f.css" rel="styleshee
 		<div id="describe"> 
           <div id="DescDir">##DESC##</div>
           <div id="DescDir_Tools2"></div>
-          <!-- ##TEMP_COMMENT_BN_BEGIN## -->
-		  <div id="COMMENT_BN">
-		    <span class="word-1" style="color:#666666;cursor:'hand';text-decoration:underline;" onclick="dc_Show()">
-					    <img width=16 src="/template/common/image/lyt_icon_comment.gif" align=absmiddle>
-					    留言(<strong><span id="CommentCount" class="word-1" style="color:#990000">?</span></strong>)</span> | 
-					<span class="word-1" style="color:#666666">點閱(<strong><span id="HitCount" class="word-1" style="color:#990000">?</span></strong>)</span> | 
-                      <span class="word-1" style="color:#666666;cursor:'hand';text-decoration:underline;" onclick="addRecommend()" id="addRecommend">
-                        <img width=16 id="img" src="/template/common/image/thumb.gif" align=absmiddle> <span id="title">推薦</span></span>
-		  </div>
-		  <!-- ##TEMP_COMMENT_BN_END## -->
+
         </div>
 		<!-- ##TEMP_DESCRIBE_END## -->  
         <!-- ##TEMP_COMMENT_BEGIN## -->
