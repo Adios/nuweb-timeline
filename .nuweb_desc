@@ -1,0 +1,6 @@
+﻿<div id="timeline" style="height: 330px; border: 1px solid #666;">
+	<p style="text-align: center; height: 330px; line-height: 330px; font-size: 80%; font-weight: bold;">
+		Loading...
+	</p>
+</div>
+<noscript>This is a timeline.</noscript>
