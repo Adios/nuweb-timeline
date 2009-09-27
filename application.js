@@ -47,6 +47,7 @@
 
 		tl = Timeline.create(element, bandInfos);
 		Timeline.loadJSON('sources.php', function(json, url) {
+				imagePreload(json);
 				eventSource.loadJSON(json, url);
 		});
 	}
@@ -58,6 +59,19 @@
 				tl.layout();
 			}, 500);
 		}
+	}
+
+	function imagePreload(json) {
+		var frag = document.createDocumentFragment();
+
+		for (var i = 0, len = json.events.length; i < len; i++) {
+			var img = new Image;
+			img.style.display = 'none';
+			img.src = json.events[i].image;
+			frag.appendChild(img);
+		}
+
+		document.body.appendChild(frag);
 	}
 })();
 

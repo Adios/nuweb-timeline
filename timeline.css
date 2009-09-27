@@ -1,5 +1,6 @@
 .timeline-event-label { font-size: 80%; }
 .timeline-event-bubble-title a { color: blue; }
+.timeline-event-bubble-image { margin-right: 0px; margin-top: 3px; }
 .timeline-ether-weekends { background-color: #ffa; }
 #timeline-band-0 .timeline-event-label { 
 	padding: 2px; 
