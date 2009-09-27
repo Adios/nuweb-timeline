@@ -1,6 +1,13 @@
 (function() {
 	var tl,
-		resizeTimer = null;
+		resizeTimer = null,
+		theme = (function() {
+			var theme = Timeline.ClassicTheme.create();
+			theme.event.instant.iconWidth = 16;
+			theme.event.instant.iconHeight = 16;
+			theme.event.track.height = 16;
+			return theme;
+		})();
 
 	window.onload = function() {
 		var element = document.getElementById('timeline'),
@@ -11,22 +18,25 @@
 					width:		'60%',
 					intervalUnit:	Timeline.DateTime.WEEK,
 					intervalPixels: 400,
-					timeZone:	8
+					timeZone:	8,
+					theme:		theme
 				}),
 				Timeline.createBandInfo({
 					eventSource:	eventSource,
 					width:		'30%',
 					intervalUnit:	Timeline.DateTime.MONTH,
 					intervalPixels:	300,
-					timeZone:	8
+					timeZone:	8,
+					theme:		theme
 				}),
 				Timeline.createBandInfo({
-					overview:	true,
 					eventSource:	eventSource,
 					width:		'10%',
 					intervalUnit:	Timeline.DateTime.YEAR,
 					intervalPixels: 200,
-					timeZone:	8
+					timeZone:	8,
+					theme:		theme,
+					layout:		'overview'
 				})
 			];
 

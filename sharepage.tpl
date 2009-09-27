@@ -7,6 +7,7 @@
 <!-- ##TEMP_SCRIPT_BEGIN## -->
 <script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>
 <script src="application.js" type="text/javascript"></script>
+<link href="timeline.css" rel="stylesheet" type="text/css" />
 <script src="/sopedia/tiny_mce/plugins/media/jscripts/embed.js"></script>
 
 <link href="/sopedia/tiny_mce/plugins/plugin_res.css" rel="stylesheet" type="text/css">

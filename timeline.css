@@ -1,0 +1,24 @@
+.timeline-event-label { font-size: 80%; }
+.timeline-event-bubble-title a { color: blue; }
+.timeline-ether-weekends { background-color: #ffa; }
+#timeline-band-0 .timeline-event-label { 
+	padding: 2px; 
+	border: 1px solid #ddd; 
+	color: #77f; 
+}
+#timeline-band-0 .timeline-event-label:hover {
+	background-color: #ffa;
+	color: red;
+}
+#timeline-band-1 .timeline-event-label { display: none; }
+#timeline {
+	height: 330px;
+	border: 1px solid #ccc;
+}
+#timeline p {
+	text-align: center; 
+	height: 330px; 
+	line-height: 330px; 
+	font-size: 80%; 
+	font-weight: bold;
+}

@@ -15,7 +15,7 @@ function walk($cwd = '.')
 
 		$path = $cwd . '/' . $file;
 		if (is_dir($path)) $data = array_merge($data, walk($path));
-		if (preg_match('/\.html$/', $path)) array_push($data, $path);
+		if (preg_match('/\.(html|wma)$/', $path)) $data []= $path;
 	}
 	return $data;
 }
@@ -23,13 +23,15 @@ function walk($cwd = '.')
 function collect($path)
 {
 	$aco = ACO_Load($path . '.aco');
+	$icon = ($aco['Type'] == 'wma') ? 'audio.png' : 'doc.png';
 
 	return Array(
 		'title' => $aco['Title'],
 		'description' => "<a href=\"$path\"><i>" . $aco['Describe'] . '</i></a>',
 		'link' => $path,
 		'start' => date('r', filemtime($path)),
-		'caption' => $aco['Describe']
+		'caption' => $aco['Describe'],
+		'icon' => $icon
 	);
 }
 ?>
