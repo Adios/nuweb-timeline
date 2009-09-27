@@ -23,3 +23,18 @@
 	font-size: 80%; 
 	font-weight: bold;
 }
+.timeline-loading {
+	border: 1px solid #ccc;
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	position: absolute;
+	top: 64px;
+	z-index: 123456;
+}
+.timeline-loading img {
+	margin-top: 67px;
+	margin-left: 67px;
+}

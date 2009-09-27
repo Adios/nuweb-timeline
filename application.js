@@ -46,9 +46,11 @@
 		bandInfos[2].highlight = true;
 
 		tl = Timeline.create(element, bandInfos);
+		loading = lazyLoading(element);
 		Timeline.loadJSON('sources.php', function(json, url) {
 				imagePreload(json);
 				eventSource.loadJSON(json, url);
+				element.removeChild(loading);
 		});
 	}
 
@@ -72,6 +74,19 @@
 		}
 
 		document.body.appendChild(frag);
+	}
+
+	function lazyLoading(e) {
+		var div = document.createElement('div'),
+			img = new Image;
+
+		img.src = 'loading.gif';
+		div.className = 'timeline-loading';
+		div.style.left = (parseInt(e.offsetWidth) - 200) / 2 + 'px';
+
+		div.appendChild(img);
+		e.appendChild(div);	
+		return div;
 	}
 })();
 
